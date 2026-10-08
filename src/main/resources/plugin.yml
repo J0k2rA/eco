@@ -1,0 +1,29 @@
+name: ElysiumEconomy
+main: net.elysium.economy.ElysiumEconomy
+version: '${project.version}'
+api-version: '1.21'
+author: Elysium
+description: Official economy system for Elysium SMP (Money + Shards)
+softdepend: [PlaceholderAPI]
+commands:
+  balance:
+    description: Show your balance
+    aliases: [bal, money]
+    usage: /balance [player]
+  shards:
+    description: Show your shards
+    usage: /shards [player]
+  pay:
+    description: Pay money to a player
+    usage: /pay <player> <amount>
+  baltop:
+    description: Richest players
+    aliases: [moneytop]
+    usage: /baltop
+  eco:
+    description: Admin economy control
+    usage: /eco <give|take|set> <player> <amount> [money|shards]
+    permission: elysium.admin
+permissions:
+  elysium.admin:
+    default: op
